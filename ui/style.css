@@ -1,15 +1,22 @@
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
-    margin-top: 75px;
+    background-color: black;
+	background-image:url("madi.png");
+	background-repeat: no-repeat;
+    margin-left: auto; 
+	margin-right: auto;
+	margin-top: 75px;
 }
 
 .center {
     text-align: center;
+	margin-left: auto; 
+	margin-right: auto;
 }
 
 .text-big {
     font-size: 300%;
+	
 }
 
 .bold {
@@ -17,6 +24,12 @@ body {
 }
 
 .img-medium {
-    height: 200px;
+    height: 500px;
+	width: 500px;
+	margin-left: auto; 
+	margin-right: auto;
+	max-height:100%; 
+	max-width:100%;
+	
 }
 
