@@ -3,9 +3,8 @@ body {
     background-color: black;
 	background-image:url("madi.png");
 	background-repeat: no-repeat;
-    margin-left: auto; 
-	margin-right: auto;
-	margin-top: 75px;
+	margin-top: 60px;
+    
 }
 
 .center {
@@ -32,4 +31,12 @@ body {
 	max-width:100%;
 	
 }
-
+.container{
+	max-width: 800px;
+	margin: 0 auto;
+	color: black;
+	font-family: arial;
+	padding-left: 20px;
+	padding-right: 20px;
+	
+}
