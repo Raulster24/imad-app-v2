@@ -28,6 +28,8 @@ button.onclick = function(){
 
 
 	};
+	
+	// change from "http://raulster24.imad.hasura-app.io/" to "localhost:8080" while working on local
 
 	request.open('GET','http://raulster24.imad.hasura-app.io/counter',true);
 	request.send(null);
