@@ -71,7 +71,7 @@ var htmltemplate = `
 		 <body>
 			<div class="container1">
 			 <div>
-				 <a href = "/">Home</a>
+				 <b><a href = "/">Home</a></b>
 			 </div>
 			 <hr/>
 			 <h3>
