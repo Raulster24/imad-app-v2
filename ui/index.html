@@ -2,20 +2,60 @@
 <html>
     <head>
         <link href="/ui/style.css" rel="stylesheet" />
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     </head>
+
     <body>
+     
+         
+    <div class="menu">
+      
+      <!-- Menu icon -->
+      <div class="icon-close">
+        <img src="http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/close.png">
+      </div>
+
+      <!-- Menu -->
+      <ul>
+        <li><a href="/article-one">Article One</a></li>
+        <li><a href="/article-two">Article Two</a></li>
+        <li><a href="/article-three">Article Three</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>   
+
+
+
+        <div class ="menu-icon">
+        <i class ="fa fa-bars"></i> Menu
+        </div>
+        <div class="container">
         <div class="center">
-            <div>
-			IMAD - Introduction to Modern Application Development.
-			</div>
+                <hr/>
+                <h3> Personal </h3>
+                <div>
+                Hi! My name is Rahul 
+                </div>
+                <hr/>
+                <h3>Professional</h3>
+                <div>
+                I am learning modern application development
+                </div>
+                <hr/>
+             <div class ="footer">
+             This button <button id = "counter">Click Me! </button> has been clicked<span id="count"> 0 </span>times
+
+             <hr/>
+             <input type="text" id="name" placeholder="enter name"></input>
+             <input type="button" id="submit_btn" value="Submit"></input>
+             <ul id = 'namelist'>
+            
+             </ul>
+             </div>   
+            </div>
         </div>
-        <br>
-        <div class="center text-big bold">
-            Hi! I am Rahul and this is my web app.
-			<h4> About Me </h4>
-			
-        </div>
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="/ui/main.js"></script>
+    
     </body>
 </html>
