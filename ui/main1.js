@@ -4,8 +4,6 @@ console.log('Loaded!');
 
 var button = document.getElementById('counter');
 
-if (button !== null)
-{
 button.onclick = function(){
 
 	//create a request to the counter end point
@@ -31,13 +29,9 @@ button.onclick = function(){
 
 	};
 
-	
-	// change from "http://raulster24.imad.hasura-app.io/" to "localhost:8080" while working on local
-
 	request.open('GET','http://localhost:8080/counter',true);
 	request.send(null);
 };
-}
 
 
 
@@ -86,11 +80,11 @@ $(document).ready(main);
 
 //submit name
 var nameInput = document.getElementById('name');
+var name = nameInput.value;
 var submit = document.getElementById('submit_btn');
 
-if (submit !== null){
-
-submit.onclick = function(){
+//make a request to the server and send names
+button.onclick = function(){
 
 	//create a request to the counter end point
 	var request = new XMLHttpRequest();
@@ -105,80 +99,20 @@ submit.onclick = function(){
 			//take some action
 			if(request.status === 200) {
 
-				var names = request.responseText;
-				names = JSON.parse(names);
+				var names = ['name1','name2','name3','name4'];
 				var list = '';
 				for (var i =0; i <names.length; i++) {
 					list += '<li>' + names[i] + '</li>';
 				}
 				var ul = document.getElementById('namelist');
 				ul.innerHTML = list;
-			}
 		}
-
-		
-
-	};
-
-	var name = nameInput.value;
-		request.open('GET','http://localhost:8080/submit-name?name=' + name, true);
-		request.send(null);
+	}
 
 };
 
-}
-
-//submit comments 
-
-var commentInput = document.getElementById('textarea');
-var commentButton = document.getElementById('submit_com');
-commentButton.onclick = function(){
-
-	var request = new XMLHttpRequest();
+request.open('GET','http://localhost:8080/counter',true);
+request.send(null);
 
 
-
-	//capture the response and store in the variable
-	request.onreadystatechange = function(){
-
-		if(request.readyState === XMLHttpRequest.DONE){
-
-			//take some action
-			if(request.status === 200) {
-
-				var comments = request.responseText;
-				comments = JSON.parse(comments);
-				var list = '';
-				for (var i =0; i <comments.length; i++) {
-					list += '<li>' + comments[i] + '</li>';
-				}
-				var ul = document.getElementById('Commentslist');
-				ul.innerHTML = list;
-			}
-		}
-
-	};
-		var comment = commentInput.value;
-		request.open('GET','http://localhost:8080/submit-comment?comment=' + comment, true);
-		request.send(null);
-	
 };
-
-		
-
-
-
-
-/*submit.onclick = function(){
-
-//make a request to the server and send names
-
-//capture a list of names and render it as list
-var names = ['name1','name2','name3','name4'];
-var list = '';
-for (var i =0; i <names.length; i++) {
-	list += '<li>' + names[i] + '</li>';
-}
-var ul = document.getElementById('namelist');
-ul.innerHTML = list;
-};*/

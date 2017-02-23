@@ -1,5 +1,5 @@
 body {
-    font-family: 'Quicksand', sans-serif;
+    font-family: sans-serif;
     background-color: #5DFADB;
 	background-image:url("/ui/giphy.gif");
 	background-repeat: no-repeat;
@@ -45,7 +45,7 @@ body {
 	max-width: 800px;
 	margin: 0 auto;
 	color: black;
-	font-family: 'Quicksand', sans-serif;
+	font-family: arial;
 	padding-left: 20px;
 	padding-right: 20px;
 	margin-top: 300px;
@@ -56,7 +56,7 @@ body {
 	max-width: 800px;
 	margin: 0 auto;
 	color: black;
-	font-family: 'Quicksand', sans-serif;
+	font-family: arial;
 	padding-left: 20px;
 	padding-right: 20px;
 	text-align: center;
@@ -93,7 +93,7 @@ body {
   left: -285px;  /* start off behind the scenes */
   height: 100%;
   position: fixed;
-  width: 285px;
+  width: 200px;
 }
 
 .icon-close {
@@ -106,7 +106,7 @@ body {
 	max-width: 800px;
 	margin: 0 auto;
 	color: black;
-	font-family: 'Quicksand', sans-serif;
+	font-family: sans-serif;
 	padding-left: 20px;
 	padding-right: 20px;
 	position: relative;
@@ -124,19 +124,9 @@ body {
 }
 
 .commentbutton{
-
 	position: relative;
 	float: right;
 	margin-top: 10px;
 	width:100px;
 	height: 30px;
-
- }
- .commentlist{
-
- 	position: relative;
- 	margin-top: 60px;
- 	max-width: 100px;
- 	display: inline-block;
-
- }
+}

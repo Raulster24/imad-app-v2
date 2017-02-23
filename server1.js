@@ -57,14 +57,13 @@ function createTemplate (data){
 	var date = data.date;
 	var heading = data.heading;
 	var content = data.content;
-var htmltemplate = `
+	var htmltemplate = `
 		<html>
 		 <head>
 			<title>
 				${title}
 			</title>
 			<link href="/ui/style.css" rel="stylesheet" />
-			<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
 			<meta name = "viewport" content="width=device-width, initial-scale=1"/>
 		 </head>
 		 
@@ -86,15 +85,12 @@ var htmltemplate = `
 			 <div class = "comment">
 			 <hr/>
 			 <h3>Comments</h3>
-			 <textarea class="textarea" rows="10" cols="100" name="comment" id ="textarea" placeholder ="Enter your comments here and press submit button"></textarea>
+			 <textarea class="textarea" rows="10" cols="100" name="comment" placeholder ="Enter your comments here and press submit button"></textarea>
 			 <input class = "commentbutton" type = "button"  id="submit_com" value = "Submit"></input>
-			 <ul class ="commentlist" id="Commentslist">
-			 <li>sdasdasdas</li>
-			 </ul>
+
 			 </div>
 
-			 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>	
-			 <script src="/ui/main.js"></script>
+
 		 </body>
 		</html>
          `;
@@ -117,19 +113,9 @@ app.get('/submit-name', function(req,res){
 	//get the name from the request
 	var name = req.query.name;
 	names.push(name);
-	res.send(JSON.stringify(names));
+	res.send(names);
 
 });
-
-var comments = []; 
-app.get('/submit-comment', function(req,res){
-	//get the name from the request
-	var comment = req.query.comment;
-	comments.push(comment);
-	res.send(JSON.stringify(comments));
-
-});
-
 
 app.get('/:articleName', function (req,res){
 	var articleName = req.params.articleName;
