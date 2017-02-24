@@ -89,7 +89,7 @@ var htmltemplate = `
 			 <textarea class="textarea" rows="10" cols="100" name="comment" id ="textarea" placeholder ="Enter your comments here and press submit button"></textarea>
 			 <input class = "commentbutton" type = "button"  id="submit_com" value = "Submit"></input>
 			 <ul class ="commentlist" id="Commentslist">
-			 <li>sdasdasdas</li>
+			 <li>Your comments will display here after submit</li>
 			 </ul>
 			 </div>
 
