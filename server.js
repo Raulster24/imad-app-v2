@@ -2,6 +2,9 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
+var Pool = require('pg').Pool;
+
+var pool = new Pool(config);
 var app = express();
 app.use(morgan('combined'));
 
@@ -104,6 +107,27 @@ var htmltemplate = `
 
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
+
+app.get('/test-db', function(req,res) {
+    
+    //make a select request
+    pool.query('SELECT * FROM test', function(err,result){
+        
+        if(err){
+            
+            res.status(500).send(err.toString());
+            
+        }
+        else {
+            res.send(JSON.stringify(result));
+        }
+        
+    });
+    
+    //respond with a result
+    
 });
 
 app.get('/favicon.ico', function (req, res) {
