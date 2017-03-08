@@ -1,10 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
 var Pool = require('pg').Pool;
-
-var pool = new Pool(config);
 var app = express();
 app.use(morgan('combined'));
 
@@ -14,9 +11,12 @@ var config = {
     database: 'raulster24',
     host: 'db.imad.hasura-app.io',
     port: '5432',
-    password: 'db-raulster24-68928'
+    password: process.env.DB_PASSWORD
     
 }
+
+var pool = new Pool(config);
+
 
 var articles = {
 
