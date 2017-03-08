@@ -172,7 +172,7 @@ app.get('/submit-comment', function(req,res){
 app.get('/articles/:articleName', function (req,res){
 	var articleName = req.params.articleName;
 	
-	pool.query("SELECT * FROM article WHERE title = " + req.param.artcileName, function(err, result){
+	pool.query("SELECT * FROM article WHERE title = '" + req.param.artcileName + "'", function(err, result){
 	    
 	    if (err){
 	        
