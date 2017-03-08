@@ -8,6 +8,16 @@ var pool = new Pool(config);
 var app = express();
 app.use(morgan('combined'));
 
+var config = {
+    
+    user: 'raulster24',
+    database: 'raulster24',
+    host: 'db.imad.hasura-app.io',
+    port: '5432',
+    password: 'db-raulster24-68928'
+    
+}
+
 var articles = {
 
 
