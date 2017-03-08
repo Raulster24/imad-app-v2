@@ -18,53 +18,6 @@ var config = {
 var pool = new Pool(config);
 
 
-var articles = {
-
-
-	'article-one': {
-			title: 'Article one | Raulster24',
-			heading:'Article One',
-			date:'19th February, 2017',
-			content:`<p>
-         		This is content for my first article. This is content for my first article. This is content for my first article. 
-         		This is content for my first article. This is content for my first article. This is content for my first article. 
-         		This is content for my first article. This is content for my first article. This is content for my first article. 
-     		</p>
-     		<p>
-         	This is content for my first article. This is content for my first article. This is content for my first article. 
-         	This is content for my first article. This is content for my first article. This is content for my first article. 
-         	This is content for my first article. This is content for my first article. This is content for my first article. 
-     		</p>
-     		<p>
-         	This is content for my first article. This is content for my first article. This is content for my first article. 
-         	This is content for my first article. This is content for my first article. This is content for my first article. 
-         	This is content for my first article. This is content for my first article. This is content for my first article. 
-     		</p>`
-     	},
-
-	'article-two': {
-			title: 'Article two | Raulster24',
-			heading:'Article Two',
-			date:'19th February, 2017',
-			content:`<p>
-				This is content for my second article.This is content for my second article.This is content for my second article.
-				This is content for my second article.This is content for my second article.This is content for my second article.
-				This is content for my second article.This is content for my second article.This is content for my second article.
-			 </p>`
-			},
-
-	'article-three': {
-			title: 'Article Three | Raulster24',
-			heading:'Article Three',
-			date:'19th February, 2017',
-			content:`<p>
-				This is content for my third article.This is content for my third article.This is content for my third article.
-				This is content for my third article.This is content for my third article.This is content for my third article.
-				This is content for my third article.This is content for my third article.This is content for my third article.
-			 </p>`}	
-
-};
-
 function createTemplate (data){
 	var title = data.title;
 	var date = data.date;
