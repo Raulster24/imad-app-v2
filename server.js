@@ -18,7 +18,7 @@ var config = {
     port: '5432',
     password: process.env.DB_PASSWORD
     
-}
+};
 
 var pool = new Pool(config);
 
@@ -241,9 +241,9 @@ app.get('/ui/madi.png', function (req, res) {
 
 
 
- app.get('/ui/madi1.png', function(req, res){
+app.get('/ui/madi1.png', function(req, res){
 	 res.sendFile(path.join(__dirname, 'ui', 'madi1.png'));
-	});
+});
 
 app.get('/ui/giphy.gif', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'giphy.gif'));
